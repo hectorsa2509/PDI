@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="950.0" 
+             xmlns="http://javafx.com/javafx/8" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controladorFiltro.InicioController">
+
+   <children>
+      <MenuBar  id="menu" layoutX="127.0" layoutY="50.0" AnchorPane.leftAnchor="0.0" 
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+        <menus >
+          <Menu mnemonicParsing="false" text="Imagen" >
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirImagen" 
+                        text="Cargar imagen" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Filtros">
+            <items>              
+      
+                  <MenuItem mnemonicParsing="false" onAction="#quitarMarcaAgua" 
+                            text="Quitar marca de agua" />     
+                  
+                  <MenuItem mnemonicParsing="false" onAction="#asignarFiltroATT" 
+text="Filtro ATT" />
+                   <MenuItem mnemonicParsing="false" onAction="#FiltroOleo" 
+text="Filtro Oleo" />
+                   
+                    <MenuItem mnemonicParsing="false" onAction="#FiltroRecursionGrises" 
+text="Filtro Recursivo Grises" />
+                    
+                  <MenuItem mnemonicParsing="false" onAction="#FiltroLuzNegra" 
+text="Filtro Luz Negra" />
+                  <MenuItem mnemonicParsing="false" onAction="#FiltroSepia" 
+text="Filtro Sepia" />
+                                    <MenuItem mnemonicParsing="false" onAction="#FiltroSemitonos" 
+text="Filtro Semitono" />
+                                       <MenuItem mnemonicParsing="false" onAction="#FiltroDithering" 
+text="Filtro Dithering" />
+                                                                              
+                                      <MenuItem mnemonicParsing="false" onAction="#FiltroLetras" 
+text="Filtro Letras (Se genera dentro de la carpeta)" />
+                                            
+                                                                              
+            </items>
+          </Menu>           
+        </menus>
+      </MenuBar>
+      <ImageView id="imagenOriginal" fx:id="imagenOriginal" fitHeight="400.0" 
+                 fitWidth="400.0" layoutX="40.0" layoutY="136.0"
+                 pickOnBounds="true" preserveRatio="true" 
+                 AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="65.0" >         
+      </ImageView>
+      
+      <ImageView id="ImageView_Imagen_Nueva" fx:id="imagenNueva" fitHeight="400.0" 
+                 fitWidth="400.0" layoutX="463.0" layoutY="65.0" pickOnBounds="true"
+                 preserveRatio="true" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="65.0">         
+      </ImageView>
+   </children>
+</AnchorPane>
